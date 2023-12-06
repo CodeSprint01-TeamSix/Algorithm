@@ -28,6 +28,8 @@
 
 <hr>
 
+### 🍎 다시 풀어보기
+
 ## 😀 나의 풀이: <br>
 ```
 var longestCommonPrefix = function (strs) {
