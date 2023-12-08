@@ -34,5 +34,64 @@
 	<li><strong>Only one valid answer exists.</strong></li>
 </ul>
 
-<p>&nbsp;</p>
-<strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face="monospace">&nbsp;</font>time complexity?</div>
+
+<h1>😎나의 풀이</h1>
+
+```js
+var twoSum = function(nums, target) {
+    for(let i=0;i < nums.length;i++){
+        for(let j=i+1; j < nums.length;j++){
+            if(nums[i] + nums[j] === target){
+                  return [i,j]
+            }
+        }
+    }
+};
+```
+
+<h1>✍️다른 사람 풀이</h1>
+
+```js
+var twoSum = function(nums, target) {
+    let hashMap = new Map();
+
+    for(let i = 0; i < nums.length; i++) {
+        let neededNumber = target - nums[i];
+
+        if(hashMap.has(neededNumber)) {
+            return [i, hashMap.get(neededNumber)];
+        } 
+        hashMap.set(nums[i], i);
+
+    }
+};
+```
+
+<h1>✍️Map 객체 사용 방법</h1>
+
+```js
+let max = new Map();
+​
+// set으로 맵 객체에 삽입
+max.set('id', 0);
+max.set('이름', '마이클');
+max.set('전공', '영문학');
+max.set('나이', 25);
+​
+// 이차원 배열로 넘겨주는 것도 가능합니다
+let michael = new Map([
+  ['id', 0],
+  ['이름', '마이클'],
+  ['전공', '영문학'],
+  ['나이', 29],
+]);
+​
+// get으로 맵 객체 조회
+max.get('이름'); // "마이클"
+​
+// delete로 삭제
+max.delete('나이'); // 삭제가 성공하면 true를 반환
+​
+// clear로 맵 안의 프로퍼티 전부삭제
+max.clear();
+```
