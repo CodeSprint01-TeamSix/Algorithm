@@ -107,5 +107,5 @@ var addTwoNumbers = function (l1, l2) {
 
 ![img](https://github.com/namminimi/LeetCode/assets/111848336/f3d78cac-e1f1-436f-9161-89c9d18f5169)
 
-
-참고자료: https://nevertrustbrutus.tistory.com/506
+참고자료1: https://www.freecodecamp.org/korean/news/implementing-a-linked-list-in-javascript/   <br>
+참고자료2: https://nevertrustbrutus.tistory.com/506
