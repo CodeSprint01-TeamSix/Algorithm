@@ -46,6 +46,9 @@ var maxProfit = function(prices) {
 
 - 받아오는 배열 값이 엄청 많으면 시간 초과가 뜬다
 
+![image](https://github.com/namminimi/LeetCode/assets/111848336/cb06a953-f360-4e27-b176-f64fce59ba86)
+
+
 ### 다른 사람 풀이 참고
 
 ```javascript
