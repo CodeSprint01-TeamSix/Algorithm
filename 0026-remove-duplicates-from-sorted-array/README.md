@@ -49,4 +49,40 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 	<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>
 </ul>
-</div>
+</div> <br><br>
+
+<hr>
+
+## 😀 나의 풀이: <br>
+```js
+var removeDuplicates = function(nums) {
+    for(let i = 0;i<nums.length;i++){
+        if(nums[i]===nums[i+1]){
+            nums.splice(i, 1);
+            i--;
+        }
+    }
+    return nums.length;
+};
+```
+-> in-place라는 게 중요한 조건인 것 같다. 또 새로운 배열을 생성하면 안된다는 조건이 있다. <br><br>
+
+## ⭕ 다른 사람의 풀이: <br>
+```
+var removeDuplicates = function(nums) {
+    var start = 0
+
+    for(let i = 0; i<nums.length;i++){
+        if(nums[start] !== nums[i]){
+            start++
+            nums[start] = nums[i]
+        }
+    }
+    return start +1
+};
+```
+
+<br><br>
+
+## 🔶 What I learned: <br>
+for보다는 while을 쓰는 것이 runtime을 더 빠르게 함!
