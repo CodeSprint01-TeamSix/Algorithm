@@ -8,7 +8,7 @@ var countBits = function(n) {
         let bin = '';
         let num = i;
         //이진수로 바꾸기 (문자열 형태로)
-        while(num/2!==0){
+        while(num!==0){
             bin=bin+String(num%2);
             num=Math.floor(num/2);
         }
