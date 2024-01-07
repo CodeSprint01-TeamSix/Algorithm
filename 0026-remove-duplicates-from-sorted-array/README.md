@@ -70,26 +70,6 @@ var removeDuplicates = function(nums) {
 ```
 반복문을 돌면서 같은 것이 있으면 splice를 이용하여 삭제하는 방법을 사용했습니다.
 
-<h1>✍️다른 사람 풀이</h1>
-
-```js
-function removeDuplicates(nums) {
-    if (nums.length === 0) {
-        return 0;
-    }
-
-    let k = 1; // Initialize the count of unique elements to 1
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i] !== nums[k - 1]) {
-            nums[k] = nums[i]; // Overwrite the next unique element
-            k++;
-        }
-    }
-
-    return k;
-}
-```
-
 <h1>✍️다른 풀이</h1>
 
 ```js
