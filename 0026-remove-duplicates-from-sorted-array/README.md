@@ -93,15 +93,31 @@ function removeDuplicates(nums) {
 <h1>✍️다른 풀이</h1>
 
 ```js
-var removeDuplicates = function(nums) {
-    let set = [...new Set(nums)];
-    nums.length = 0;
-    nums.push(...set);
-    return nums.length;
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    let minPrice = prices[0];
+    let maxProfit = 0;
+
+    for (let i = 1; i < prices.length; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i];
+        } else {
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+        }
+    }
+
+    return maxProfit;
 };
+
 ```
-set을 이용해서 풀어보았는데 처음에는 nums = []; 이렇게 빈 배열로 초기화 했을 때는 안되었는데 nums.length = 0; 이렇게 초기화 하니 됐습니다.<br>
-<br>
-nums = [];를 사용하면 nums는 새로운 배열을 참조하게 되므로 원본 배열에는 영향을 주지 않습니다. <br>
-반면에 nums.length = 0;을 사용하면 nums는 여전히 원본 배열을 참조하므로 원본 배열도 변경됩니다. <br>
-이러한 차이 때문에 nums = [];를 사용했을 때 원하는 결과를 얻지 못했습니다.
+우선 이 풀이의 시간 복잡도는 O(n)입니다.
+
+1. minPrice와 maxProfit이라는 두 변수를 초기화합니다. minPrice는 prices 배열의 첫 번째 요소로 설정하고, maxProfit은 0으로 설정합니다. minPrice는 지금까지 발견한 가장 낮은 주식 가격을 저장하며, maxProfit은 지금까지 발견한 가장 큰 이익을 저장합니다.
+2. prices 배열의 두 번째 요소부터 순회를 시작합니다. (인덱스 1부터 시작)
+3. 현재 요소가 minPrice보다 작다면, minPrice를 현재 요소로 업데이트합니다. 즉, 새로운 최소 주식 가격을 발견한 경우입니다.
+4. 현재 요소가 minPrice보다 크다면, 현재 요소와 minPrice의 차이를 계산하여 이익을 구합니다. 이 이익과 현재까지의 최대 이익 maxProfit을 비교하여, 더 큰 값으로 maxProfit을 업데이트합니다.
+5. 모든 요소를 순회한 후, maxProfit을 반환합니다. 이 값이 주식을 한 번만 구매하고 한 번만 판매하여 얻을 수 있는 최대 이익입니다.
+이 알고리즘은 "최소 구매 가격"을 유지하면서 "최대 판매 가격"을 찾는 방식으로 작동합니다. 이렇게 하면 한 번의 순회로 최대 이익을 찾을 수 있습니다.
