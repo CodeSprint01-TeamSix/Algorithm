@@ -3,9 +3,9 @@ function solution(n) {
     
     while(true) {
         if(nextN.toString(2).split('').filter(e => e === '1').length === n.toString(2).split('').filter(e => e === '1').length) {
-            break;
+            return nextN;
+        } else {
+            nextN++;
         }
-        nextN++;
     }
-    return nextN;
 }
