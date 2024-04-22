@@ -1,10 +1,11 @@
 function solution(A,B){
-    let result = 0;
-    A.sort((a, b) => a - b);
-    B.sort((a, b) => b - a);
+    let result = [];
+    
+    A.sort((a,b) => a - b);
+    B.sort((a,b) => b - a);
     
     for(let i = 0; i < A.length; i++) {
-        result += A[i] * B[i];
+        result.push(A[i] * B[i]);
     }
-    return result;
+    return result.reduce((prev, cur) => prev + cur, 0);
 }
