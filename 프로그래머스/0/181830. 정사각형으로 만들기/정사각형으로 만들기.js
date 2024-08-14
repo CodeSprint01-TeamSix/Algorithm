@@ -1,17 +1,17 @@
 function solution(arr) {
-    let row = arr[0].length;
-    let col = arr.length
+    let arrLen = arr.length;
+    let arrChildLen = arr[0].length;
     
-    if(row > col) {
-        for(let i = 0; i < row - col; i++) {
-            arr.push(Array(row).fill(0))
+    if(arrLen < arrChildLen) {
+        for(let i = 0; i < arrChildLen - arrLen; i++) {
+            arr.push(Array(arrChildLen).fill(0))
         }
-    } else if(row < col) {
-        for(let i = 0; i < col; i++) {
-            for(let j = 0; j < col - row; j++) {
+    } else if(arrLen > arrChildLen) {
+        for(let i = 0; i < arrLen; i++) {
+            for(let j = 0; j < arrLen - arrChildLen; j++) {
                 arr[i].push(0);
-            }
+            }   
         }
-    } 
-    return arr
+    }
+    return arr;
 }
