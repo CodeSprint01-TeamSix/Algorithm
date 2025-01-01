@@ -1,11 +1,11 @@
 function solution(brown, yellow) {
     let area = brown + yellow;
     
-    for(let col = 3; col <= area / col; col++) {
+    for(let col = 3; col <= Math.sqrt(area); col++) {
         if(area % col === 0) {
             let row = area / col;
             
-            if((row-2)*(col-2) === yellow) return [row, col]
+            if((row - 2) * (col - 2) === yellow) return [row, col];
         }
     }
 }

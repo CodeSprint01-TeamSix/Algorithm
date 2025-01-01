@@ -1,19 +1,11 @@
 function solution(n, words) {
-    let stack = [];
+    let stack = [words[0]];
     
-    for(let i = 0; i < words.length - 1; i++) {
-        stack.push(words[i]);
-        // console.log(stack[i].substr(stack[i].length - 1, 1))
-        // console.log(words[i+1].substring(0, 1))
-        if(stack[i].substr(stack[i].length - 1, 1) !== words[i+1].substring(0, 1)) {
-            console.log(1)
-            console.log(i)
-            console.log(Math.ceil((i+1) / n))
-            return [((i+1) % n) + 1, Math.ceil((i+2) / n)];
-        }
-        if(stack.includes(words[i+1])) {
-            console.log(2)
-            return [((i+1) % n) + 1, Math.ceil((i+2) / n)];
+    for(let i = 1; i < words.length; i++) {
+        if(stack.includes(words[i]) || stack[stack.length - 1][stack[stack.length - 1].length - 1] !== words[i][0]) {
+            return [i % n + 1, Math.ceil((i + 1) / n)]
+        }  else {
+            stack.push(words[i]);
         }
     }
     return [0, 0]

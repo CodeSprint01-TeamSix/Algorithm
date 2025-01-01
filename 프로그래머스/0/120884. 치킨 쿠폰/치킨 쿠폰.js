@@ -1,16 +1,11 @@
 function solution(chicken) {
-    let cnt = 0;
-    let result = 0;
+    let plusChicken = 0;
     
-    while(chicken > 0) {
-        cnt++;
-        chicken--;
-        
-        if(cnt === 10) {
-            chicken++;
-            cnt = 0;
-            result++;
+    while(chicken >= 10) {
+        if(chicken / 10) {
+            plusChicken += Math.floor(chicken / 10);
+            chicken = Math.floor(chicken / 10) + chicken % 10;
         } 
     }
-    return result;
+    return plusChicken
 }

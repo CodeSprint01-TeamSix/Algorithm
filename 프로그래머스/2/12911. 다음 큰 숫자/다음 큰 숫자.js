@@ -1,11 +1,13 @@
 function solution(n) {
-    let nextN = n + 1;
+    let result = n+1;
     
     while(true) {
-        if(nextN.toString(2).split('').filter(e => e === '1').length === n.toString(2).split('').filter(e => e === '1').length) {
-            return nextN;
+        if([...n.toString(2)].filter(e => e === '1').length === [...result.toString(2)].filter(e => e === '1').length) {
+            break;
         } else {
-            nextN++;
+            result++;
         }
     }
+    
+    return result;
 }

@@ -1,15 +1,14 @@
 function solution(s) {
     let result = [];
-    let newArr = s.replace('{{', '').replace('}}', '').split('},{');
-    newArr.sort((a,b) => a.length - b.length);
     
-    for(let i = 0; i < newArr.length; i++) {
-        let tuple = newArr[i].split(',');
-        for(let j = 0; j < tuple.length; j++) {
-            let num = parseInt(tuple[j]);
-            result.push(num);
-        }
+    s = s.replace('{{', '').replace('}}', '').split('},{').sort((a,b) => a.length - b.length);
+    
+    for(let i = 0; i < s.length; i++) {
+        let element = s[i].split(',').map(e => parseInt(e));
+        
+        element.forEach(e => {
+            if(!result.includes(e)) result.push(e);
+        });
     }
-    result = [...new Set(result)]
     return result;
 }

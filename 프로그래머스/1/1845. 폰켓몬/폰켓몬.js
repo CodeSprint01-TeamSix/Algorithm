@@ -1,7 +1,10 @@
 function solution(nums) {
-    if([...new Set(nums)].length >= nums.length / 2) {
-        return nums.length / 2;
+    let set = new Set(nums);
+    const getCount = nums.length / 2;
+    
+    if(getCount >= set.size) {
+        return set.size
     } else {
-        return [...new Set(nums)].length;
+        return getCount
     }
 }

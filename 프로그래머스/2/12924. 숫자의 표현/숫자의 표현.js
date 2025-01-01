@@ -1,9 +1,9 @@
 function solution(n) {
-    let answer = 0;
+   let result = 0;
+    
     for(let i = 1; i <= n; i++) {
-        if(n % i === 0 && i % 2 !== 0) {
-            answer++;
-        }
+        if(n % i === 0 && i % 2 !== 0) result ++;
     }
-    return answer;
+    
+    return result;
 }

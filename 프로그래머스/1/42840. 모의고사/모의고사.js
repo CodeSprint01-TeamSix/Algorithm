@@ -1,37 +1,41 @@
 function solution(answers) {
-    let no1 = [1,2,3,4,5]
-    no1 = [].concat(...Array(2000).fill(no1))
-    let no2 = [2,1,2,3,2,4,2,5];
-    no2 = [].concat(...Array(1250).fill(no2))
-    let no3 = [3,3,1,1,2,2,4,4,5,5];
-    no3 = [].concat(...Array(1000).fill(no3))
-    let one = 0;
-    let two = 0;
-    let three = 0;
-    
-    for(let i = 0; i < answers.length; i++) {
-        if(no1[i] === answers[i]) {
-            one++;
-        }
-        if(no2[i] === answers[i]) {
-            two++;
-        }
-        if(no3[i] === answers[i]) {
-            three++;
-        }
-    }
-    
-    const maxCount = Math.max(one, two, three);
+    let one = [1,2,3,4,5];
+    let two = [2,1,2,3,2,4,2,5];
+    let three = [3,3,1,1,2,2,4,4,5,5];
+    let dict = {1: 0, 2: 0, 3: 0};
+    let maxCount = 0;
     let result = [];
     
-    if (maxCount === one) {
+    for(let i = 0; i < answers.length; i++) {
+        if(one.length < answers.length) {
+            one = [].concat(...Array(Math.ceil(answers.length / one.length)).fill(one));
+        } else if(two.length < answers.length) {
+            two = [].concat(...Array(Math.ceil(answers.length / two.length)).fill(two));
+        } else if(three.length < answers.length) {
+            three = [].concat(...Array(Math.ceil(answers.length / three.length)).fill(three));
+        }
+        
+        if(answers[i] === one[i]) {
+            dict[1]++;
+        }
+        if(answers[i] === two[i]) {
+            dict[2]++;
+        } 
+        if(answers[i] === three[i]) {
+            dict[3]++;
+        }
+    }
+    maxCount = Math.max(dict[1], dict[2], dict[3]);
+
+    if(dict[1] === maxCount) {
         result.push(1);
     } 
-    if (maxCount === two) {
+    if(dict[2] === maxCount) {
         result.push(2);
     } 
-    if (maxCount === three) {
+    if(dict[3] === maxCount) {
         result.push(3);
     }
+            
     return result;
 }

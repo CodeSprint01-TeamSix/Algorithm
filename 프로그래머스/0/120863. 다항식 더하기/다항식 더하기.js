@@ -1,28 +1,28 @@
 function solution(polynomial) {
-    let answer = '';
-    let variable = 0;
-    let constant = 0;
-    
-    polynomial = polynomial.split(' + ');
+    let result = [0, 0];
 
-    polynomial.forEach((e) => {
-        if(e.includes('x')) {
-            let a = e.replace('x', '');
-            if(a === '') a = 1;
-            variable += parseInt(a)
-        } else {
-            constant += parseInt(e)
-        }
+    polynomial = polynomial.split('+').map(e => {
+        e = e.trim();
+        if(e === 'x') return e = '1x';
+        else return e;
     })
-    if(variable !== 0) {
-        if(variable === 1) answer += 'x';
-        else answer += (`${variable}x`)
+    
+    for(let i = 0; i < polynomial.length; i++) {
+        if(polynomial[i].includes('x')) {
+            result[0] += parseInt(polynomial[i].replace('x', ''))
+        } else {
+            result[1] += parseInt(polynomial[i])
+        }
     }
     
-    if(constant !== 0) {
-        if(variable !== 0) answer += ' + ';
-        answer += constant
-    }
+    let xPart = result[0] === 0 ? '' : (result[0] === 1 ? 'x' : result[0].toString() + 'x');
+    let constantPart = result[1] === 0 ? '' : result[1].toString();
     
-    return answer === '' ? '0' : answer;
+    if(xPart && constantPart) {
+        return xPart + ' + ' + constantPart;
+    } else if(xPart) {
+        return xPart
+    } else {
+        return constantPart
+    }
 }

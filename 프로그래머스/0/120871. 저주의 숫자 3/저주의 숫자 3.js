@@ -1,11 +1,12 @@
 function solution(n) {
-    let newN = 0;
+    let result = n;
     
-    while(n > 0) {
-        if(newN % 3 !== 0 && !String(newN).includes('3')) {
-            n--;
+    for(let i = 1; i <= n; i++) {
+        if(i % 3 === 0 || i.toString().includes(3)) {
+            result++;
+            n++;
         }
-        newN++;
     }
-    return newN - 1;
+    
+    return result;
 }

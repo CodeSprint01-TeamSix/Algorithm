@@ -1,14 +1,16 @@
 function solution(prices) {
-    let answer = [];
+    let result = Array(prices.length).fill(0);
+    
     for(let i = 0; i < prices.length; i++) {
-        let stack = 0;
         for(let j = i + 1; j < prices.length; j++) {
-            stack++;
-            if(prices[i] > prices[j]) {
+            if(prices[i] <= prices[j]) {
+                result[i]++;
+            } else {
+                result[i]++;
                 break;
             }
         }
-        answer.push(stack);
     }
-    return answer;
+    
+    return result;
 }

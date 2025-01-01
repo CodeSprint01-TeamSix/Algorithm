@@ -1,21 +1,18 @@
-function GCD(a, b) {
-    let gcd = 1;
-    
-    for(let i = 2; i <= Math.min(a,b); i++) {
-        if(a % i === 0 && b % i === 0) {
-            gcd = i;
-        }
+function gcd(a,b) {
+    while(b > 0) {
+        const temp = a % b;
+        a = b
+        b = temp
     }
-    return gcd;
+    return a;
 }
 
 function solution(a, b) {
-    let x = a / GCD(a,b)
-    let y = b / GCD(a,b)
+    b = b / gcd(a,b);
     
-    while(y % 2 === 0) y /= 2;
-    while(y % 5 === 0) y /= 5;
-    
-    if(y === 1) return 1;
-    return 2;
+    while(b % 2 === 0 || b % 5 === 0) {
+        if(b%2 === 0) b = b / 2;
+        if(b%5 === 0) b = b / 5;
+    }
+    return b === 1 ? 1 : 2
 }

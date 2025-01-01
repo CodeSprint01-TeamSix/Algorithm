@@ -1,20 +1,17 @@
 function solution(n) {
-    let prime = Array(n+1).fill(true);
-    prime[0] = prime[1] = false;
+    let isPrime = Array(n+1).fill(true);
+    
+    isPrime[0] = isPrime[1] = false;
     
     for(let i = 2; i <= Math.sqrt(n); i++) {
-        if(prime[i]) {
+        if(isPrime[i]) {
             for(let j = i * i; j <= n; j += i) {
-                prime[j] = false;
+                isPrime[j] = false;
             }
         }
     }
     
-    let cnt = 0;
-    for(let i = 2; i <= n; i++) {
-        if(prime[i]) cnt++;
-    }
-    return cnt;
+    return isPrime.filter(value => value).length;
 }
 // 에라토스테네스의 체 알고리즘을 사용해야 함
 // 1. 2부터 시작하여 차례대로 소수인지 여부를 기록하는 배열을 만듭니다.

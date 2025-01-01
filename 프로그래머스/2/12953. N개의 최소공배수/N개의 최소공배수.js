@@ -1,14 +1,21 @@
-function getGCD(a, b) {
-    let gcd = 1;
-    
-    for(let i = 1; i <= Math.min(a, b); i++) {
-        if(a % i === 0 && b % i === 0) {
-            gcd = i;
-        }
+function GCD(a, b) {
+    while(b > 0) {
+        let temp = b;
+        b = a%b;
+        a = temp;
     }
-    return gcd;
+    return a;
 }
 
 function solution(arr) {
-    return arr.reduce((a, b) => (a * b) / getGCD(a, b))
+    let result = 0;
+    
+    for(let i = 0; i < arr.length - 1; i++) {
+        if(result) {
+            result = arr[i+1] * result / GCD(arr[i+1], result)
+        } else {
+            result = arr[i] * arr[i+1] / GCD(arr[i], arr[i+1])
+        }
+    }
+    return result
 }
