@@ -1,23 +1,26 @@
 function solution(bandage, health, attacks) {
-    const [consecutiveTurns, normalHeal, bonusHeal] = bandage;
-    let currentTurn = 0;
+    const [consecutiveTurn, healPerSec, bonusHeal] = bandage;
     let currentHealth = health;
+    let attackTime = 0;
     
-    for(const [attackTime, damage] of attacks) {
-        let healTime = attackTime - 1 - currentTurn;
-        currentHealth = currentHealth + normalHeal * healTime;
+    for(let [attackTurn, damage] of attacks) {
+        let healTime = attackTurn - attackTime - 1;
         
-        while(healTime >= consecutiveTurns) {
+        currentHealth += healPerSec * healTime;
+        
+        while(healTime >= consecutiveTurn) {
             currentHealth += bonusHeal;
-            healTime -= consecutiveTurns;
+            healTime -= consecutiveTurn;
         }
         
-        if(currentHealth >= health) currentHealth = health
+        if(currentHealth > health) currentHealth = health;
+        
         currentHealth -= damage;
-        currentTurn = attackTime;
         
         if(currentHealth <= 0) return -1;
+        
+        attackTime = attackTurn;
     }
     
-    return currentHealth > 0 ? currentHealth : -1;
+    return currentHealth;
 }
