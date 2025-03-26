@@ -19,6 +19,7 @@ Solving problems at LeetCode.
 | [1013-fibonacci-number](https://github.com/leegyuho-programer/Algorithm/tree/master/1013-fibonacci-number) |
 | [1086-divisor-game](https://github.com/leegyuho-programer/Algorithm/tree/master/1086-divisor-game) |
 | [1236-n-th-tribonacci-number](https://github.com/leegyuho-programer/Algorithm/tree/master/1236-n-th-tribonacci-number) |
+| [1764-maximum-repeating-substring](https://github.com/leegyuho-programer/Algorithm/tree/master/1764-maximum-repeating-substring) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## Math
 |  |
@@ -46,9 +47,14 @@ Solving problems at LeetCode.
 ## String
 |  |
 | ------- |
+| [1764-maximum-repeating-substring](https://github.com/leegyuho-programer/Algorithm/tree/master/1764-maximum-repeating-substring) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## Greedy
 |  |
 | ------- |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
+## String Matching
+|  |
+| ------- |
+| [1764-maximum-repeating-substring](https://github.com/leegyuho-programer/Algorithm/tree/master/1764-maximum-repeating-substring) |
 <!---LeetCode Topics End-->
