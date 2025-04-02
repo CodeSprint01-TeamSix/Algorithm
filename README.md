@@ -6,6 +6,7 @@ Solving problems at LeetCode.
 ## Array
 |  |
 | ------- |
+| [0015-3sum](https://github.com/leegyuho-programer/Algorithm/tree/master/0015-3sum) |
 | [0118-pascals-triangle](https://github.com/leegyuho-programer/Algorithm/tree/master/0118-pascals-triangle) |
 | [0119-pascals-triangle-ii](https://github.com/leegyuho-programer/Algorithm/tree/master/0119-pascals-triangle-ii) |
 | [0747-min-cost-climbing-stairs](https://github.com/leegyuho-programer/Algorithm/tree/master/0747-min-cost-climbing-stairs) |
@@ -82,4 +83,12 @@ Solving problems at LeetCode.
 |  |
 | ------- |
 | [2159-two-out-of-three](https://github.com/leegyuho-programer/Algorithm/tree/master/2159-two-out-of-three) |
+## Two Pointers
+|  |
+| ------- |
+| [0015-3sum](https://github.com/leegyuho-programer/Algorithm/tree/master/0015-3sum) |
+## Sorting
+|  |
+| ------- |
+| [0015-3sum](https://github.com/leegyuho-programer/Algorithm/tree/master/0015-3sum) |
 <!---LeetCode Topics End-->
