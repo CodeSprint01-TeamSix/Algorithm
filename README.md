@@ -53,11 +53,15 @@ Solving problems at LeetCode.
 | ------- |
 | [1764-maximum-repeating-substring](https://github.com/leegyuho-programer/Algorithm/tree/master/1764-maximum-repeating-substring) |
 | [2053-check-if-all-characters-have-equal-number-of-occurrences](https://github.com/leegyuho-programer/Algorithm/tree/master/2053-check-if-all-characters-have-equal-number-of-occurrences) |
+| [2088-minimum-time-to-type-word-using-special-typewriter](https://github.com/leegyuho-programer/Algorithm/tree/master/2088-minimum-time-to-type-word-using-special-typewriter) |
+| [2154-minimum-moves-to-convert-string](https://github.com/leegyuho-programer/Algorithm/tree/master/2154-minimum-moves-to-convert-string) |
 | [2163-kth-distinct-string-in-an-array](https://github.com/leegyuho-programer/Algorithm/tree/master/2163-kth-distinct-string-in-an-array) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## Greedy
 |  |
 | ------- |
+| [2088-minimum-time-to-type-word-using-special-typewriter](https://github.com/leegyuho-programer/Algorithm/tree/master/2088-minimum-time-to-type-word-using-special-typewriter) |
+| [2154-minimum-moves-to-convert-string](https://github.com/leegyuho-programer/Algorithm/tree/master/2154-minimum-moves-to-convert-string) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## String Matching
 |  |
