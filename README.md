@@ -13,6 +13,8 @@ Solving problems at LeetCode.
 | [2122-count-special-quadruplets](https://github.com/leegyuho-programer/Algorithm/tree/master/2122-count-special-quadruplets) |
 | [2159-two-out-of-three](https://github.com/leegyuho-programer/Algorithm/tree/master/2159-two-out-of-three) |
 | [2163-kth-distinct-string-in-an-array](https://github.com/leegyuho-programer/Algorithm/tree/master/2163-kth-distinct-string-in-an-array) |
+| [2199-two-furthest-houses-with-different-colors](https://github.com/leegyuho-programer/Algorithm/tree/master/2199-two-furthest-houses-with-different-colors) |
+| [2248-minimum-cost-of-buying-candies-with-discount](https://github.com/leegyuho-programer/Algorithm/tree/master/2248-minimum-cost-of-buying-candies-with-discount) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## Dynamic Programming
 |  |
@@ -62,6 +64,8 @@ Solving problems at LeetCode.
 | ------- |
 | [2088-minimum-time-to-type-word-using-special-typewriter](https://github.com/leegyuho-programer/Algorithm/tree/master/2088-minimum-time-to-type-word-using-special-typewriter) |
 | [2154-minimum-moves-to-convert-string](https://github.com/leegyuho-programer/Algorithm/tree/master/2154-minimum-moves-to-convert-string) |
+| [2199-two-furthest-houses-with-different-colors](https://github.com/leegyuho-programer/Algorithm/tree/master/2199-two-furthest-houses-with-different-colors) |
+| [2248-minimum-cost-of-buying-candies-with-discount](https://github.com/leegyuho-programer/Algorithm/tree/master/2248-minimum-cost-of-buying-candies-with-discount) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/leegyuho-programer/Algorithm/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## String Matching
 |  |
@@ -95,4 +99,5 @@ Solving problems at LeetCode.
 |  |
 | ------- |
 | [0015-3sum](https://github.com/leegyuho-programer/Algorithm/tree/master/0015-3sum) |
+| [2248-minimum-cost-of-buying-candies-with-discount](https://github.com/leegyuho-programer/Algorithm/tree/master/2248-minimum-cost-of-buying-candies-with-discount) |
 <!---LeetCode Topics End-->
