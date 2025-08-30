@@ -4,30 +4,28 @@ let input = fs
   .toString()
   .trim()
   .split('\n')
-  .map((e) => Number(e.trim()));
 
-const T = input[0];
-const testCases = [];
+  const T = Number(input.shift());
 
-for (let i = 1; i < input.length; i += 2) {
-  testCases.push([input[i], input[i + 1]]);
-}
-
-const maxK = 14;
-const maxN = 14;
-
-const dp = Array.from({ length: maxK + 1 }, () => Array(maxN + 1).fill(0));
-
-for (let i = 1; i <= maxN; i++) {
-  dp[0][i] = i;
-}
-
-for (let k = 1; k <= maxK; k++) {
-  for (let n = 1; n <= maxN; n++) {
-    dp[k][n] = dp[k - 1][n] + dp[k][n - 1];
+  // 점화식
+  // dp[i][j] = dp[i-1][0] + dp[i-1][1] + ... + dp[i-1][j]
+  // -> dp[i][j] = dp[i][j-1] + dp[i-1][j];
+  
+  for (let i = 0; i < T * 2; i += 2) {
+    const k = Number(input.shift());
+    const n = Number(input.shift());
+  
+    const dp = Array.from({ length: k + 1 }, () => Array(n + 1).fill(0));
+  
+    for (let j = 1; j <= n; j++) {
+      dp[0][j] = j;
+    }
+  
+    for (let l = 1; l <= k; l++) {
+      for (let j = 1; j <= n; j++) {
+        dp[l][j] = dp[l][j - 1] + dp[l - 1][j];
+      }
+    }
+  
+    console.log(dp[k][n]);
   }
-}
-
-for (let [k, n] of testCases) {
-  console.log(dp[k][n]);
-}
